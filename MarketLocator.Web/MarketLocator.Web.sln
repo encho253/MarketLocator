@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.Web", "MarketLocator.Web\MarketLocator.Web.csproj", "{A9C3060B-00D1-4F9F-B10B-0821E8647E7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.Services", "MarketLocator.Services\MarketLocator.Services.csproj", "{D6195853-CBF2-4B75-9FFA-6CE9693537A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.DB", "MarketLocator.DB\MarketLocator.DB.csproj", "{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.Interfaces", "MarketLocator.Interfaces\MarketLocator.Interfaces.csproj", "{81906A5A-20AF-4C46-B237-F20ADA4A1F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{A9C3060B-00D1-4F9F-B10B-0821E8647E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C3060B-00D1-4F9F-B10B-0821E8647E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C3060B-00D1-4F9F-B10B-0821E8647E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6195853-CBF2-4B75-9FFA-6CE9693537A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6195853-CBF2-4B75-9FFA-6CE9693537A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6195853-CBF2-4B75-9FFA-6CE9693537A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6195853-CBF2-4B75-9FFA-6CE9693537A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
