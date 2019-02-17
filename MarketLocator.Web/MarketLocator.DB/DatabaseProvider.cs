@@ -8,40 +8,17 @@ namespace MarketLocator.DB
     {
         private const string ConnectionString = "Data Source=.;Initial Catalog=SMART_CITIES;Integrated Security=True";
 
-        private SqlConnection connection;
-        private SqlCommand command;
-
         public DatabaseProvider()
         {
             this.Connection = new SqlConnection();
             this.Command = new SqlCommand();
         }
 
-        public SqlConnection Connection
-        {
-            get
-            {
-                return this.connection;
-            }
-            set
-            {
-                this.connection = value;
-            }
-        }
+        public SqlConnection Connection { get; set; }
 
-        public SqlCommand Command
-        {
-            get
-            {
-                return this.command;
-            }
-            set
-            {
-                this.command = value;
-            }
-        }
+        public SqlCommand Command { get; set; }
 
-        public SqlDataReader ReadCommand(string commandString, string commandParameter = null)
+        public SqlDataReader ReadCommand(string commandString, string commandParameter)
         {
             this.Connection.ConnectionString = ConnectionString;
 
@@ -55,9 +32,11 @@ namespace MarketLocator.DB
 
             this.Command.Connection = this.Connection;
 
-            //this.Connection.Open();
+            this.Connection.Open();
 
             SqlDataReader reader = this.Command.ExecuteReader();
+
+            this.Connection.Close();
 
             return reader;
         }

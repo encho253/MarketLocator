@@ -7,6 +7,8 @@ namespace MarketLocator.Web.App_Start
     using System.Web;
     using MarketLocator.DB;
     using MarketLocator.Interfaces.Database;
+    using MarketLocator.Interfaces.Services;
+    using MarketLocator.Services;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
@@ -63,6 +65,7 @@ namespace MarketLocator.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDatabaseProvider>().To<DatabaseProvider>().InRequestScope();
+            kernel.Bind<ITrafficService>().To<TrafficService>();
         }        
     }
 }

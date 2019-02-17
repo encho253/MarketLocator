@@ -8,6 +8,6 @@ namespace MarketLocator.Interfaces.Database
 
         SqlCommand Command { get; set; }
 
-        SqlDataReader ReadCommand(string commandString, string commandParameter = null);
+        SqlDataReader ReadCommand(string commandString, string commandParameter);
     }
 }

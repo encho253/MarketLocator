@@ -209,6 +209,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Traffic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -254,6 +256,10 @@
     <ProjectReference Include="..\MarketLocator.Interfaces\MarketLocator.Interfaces.csproj">
       <Project>{81906A5A-20AF-4C46-B237-F20ADA4A1F40}</Project>
       <Name>MarketLocator.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarketLocator.Services\MarketLocator.Services.csproj">
+      <Project>{D6195853-CBF2-4B75-9FFA-6CE9693537A9}</Project>
+      <Name>MarketLocator.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -8,7 +8,7 @@
             <br />
             <asp:Label CssClass="control-label" runat="server">Gender: </asp:Label>
             <asp:DropDownList ID="DropDownListGenre" CssClass="dropdown form-control" runat="server"></asp:DropDownList>
-            <br />
+            <br />          
 
             <asp:Button runat="server" Text="Filter" OnClick="Unnamed_Click" />
         </div>
@@ -16,4 +16,5 @@
             <div id="mapid" style="width: 100px; height: 600px; min-height: 100%; min-width: 100%;"></div>
         </div>
     </div>
+      <script src="Scripts/Leaflet/leaflet.js"></script>
 </asp:Content>

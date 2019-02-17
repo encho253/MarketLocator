@@ -40,18 +40,14 @@
             </Scripts>
         </asp:ScriptManager>
 
-       
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>         
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Market Locator</p>
             </footer>
         </div>
-
     </form>
-    <script src="Scripts/Leaflet/leaflet.js"></script>
-
 </body>
 </html>
