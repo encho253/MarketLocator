@@ -45,9 +45,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MarketLocator.DB\MarketLocator.DB.csproj">
+      <Project>{D171DA35-4BC8-4C50-88D6-3E19D3D2F95A}</Project>
+      <Name>MarketLocator.DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MarketLocator.Interfaces\MarketLocator.Interfaces.csproj">
       <Project>{81906A5A-20AF-4C46-B237-F20ADA4A1F40}</Project>
       <Name>MarketLocator.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarketLocator.Models\MarketLocator.Models.csproj">
+      <Project>{5DDCAA55-05F8-4326-8453-16D6DC39C584}</Project>
+      <Name>MarketLocator.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

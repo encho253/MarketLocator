@@ -1,4 +1,5 @@
 ﻿using MarketLocator.Interfaces.Services;
+using MarketLocator.Models;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -40,21 +41,29 @@ namespace MarketLocator.Web
             }
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
+        protected void Filter_Click(object sender, EventArgs e)
         {
-            var pt = new decimal[30,30];
-            //[48.1486, 17.1077]
-            for (int i = 0; i < 30; i++)
-            {
-                var l1 = 48.1486 + 0.01;
-                var l2 = 17.1077 + 0.01;
+            string age = this.DropDownListAge.SelectedValue;
+            int minimumAge = int.Parse(age.Split('-')[0]);
+            int maximumAge = int.Parse(age.Split('-')[1]);
+            string gender = this.DropDownListGenre.SelectedValue;
 
-               // Page.ClientScript.RegisterStartupScript(GetType(), "addPoint", "addPoint('" + l1 +"', '" + l2 +"');", true);
+            DateTime date = DateTime.Now;
+
+            if (this.startDate.Text != String.Empty)
+            {
+                date = Convert.ToDateTime(this.startDate.Text);
+            }
+            else
+            {
+                this.startDate.Text = DateTime.Now.Date.ToString();
             }
 
-            this.TrafficService.GetFilteredLocations();
-            var p = this.DropDownListAge.SelectedValue;
-            var c = this.DropDownListGenre.SelectedValue;
+            List<Traffic> data = this.TrafficService.GetFilteredLocations(gender, minimumAge, maximumAge, date);
+
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(data);
+            Response.Write(string.Concat("<input id='data' type='hidden' value='", json, "' />"));
+            Page.ClientScript.RegisterStartupScript(GetType(), "addPoint", "addPoint();", true);        
         }
     }
 }

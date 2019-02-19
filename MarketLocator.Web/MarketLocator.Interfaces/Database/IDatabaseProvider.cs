@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 
 namespace MarketLocator.Interfaces.Database
 {
@@ -8,6 +9,6 @@ namespace MarketLocator.Interfaces.Database
 
         SqlCommand Command { get; set; }
 
-        SqlDataReader ReadCommand(string commandString, string commandParameter);
+        SqlDataReader ReadCommand(string commandString, string gender, int minimumAge, int maximumAge, DateTime date);
     }
 }

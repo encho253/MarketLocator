@@ -1,4 +1,5 @@
 ﻿using MarketLocator.Interfaces.Database;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -18,16 +19,31 @@ namespace MarketLocator.DB
 
         public SqlCommand Command { get; set; }
 
-        public SqlDataReader ReadCommand(string commandString, string commandParameter)
+        public SqlDataReader ReadCommand(string commandString, string gender, int minimumAge, int maximumAge, DateTime date)
         {
             this.Connection.ConnectionString = ConnectionString;
 
             this.Command.CommandText = commandString;
             this.Command.CommandType = CommandType.StoredProcedure;
 
-            if (commandParameter != null)
+            if (gender != null)
             {
-                this.Command.Parameters.Add("@table", SqlDbType.VarChar).Value = commandParameter;
+                this.Command.Parameters.Add("@gender", SqlDbType.VarChar).Value = gender;
+            }
+
+            if (minimumAge != 0)
+            {
+                this.Command.Parameters.Add("@minimumAge", SqlDbType.Int).Value = minimumAge;
+            }
+
+            if (maximumAge != 0)
+            {
+                this.Command.Parameters.Add("@maximumAge", SqlDbType.Int).Value = maximumAge;
+            }
+
+            if (date != null)
+            {
+                this.Command.Parameters.Add("@date", SqlDbType.Date).Value = date.Date;
             }
 
             this.Command.Connection = this.Connection;
@@ -35,8 +51,6 @@ namespace MarketLocator.DB
             this.Connection.Open();
 
             SqlDataReader reader = this.Command.ExecuteReader();
-
-            this.Connection.Close();
 
             return reader;
         }

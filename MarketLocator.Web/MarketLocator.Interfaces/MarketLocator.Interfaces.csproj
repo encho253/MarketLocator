@@ -45,6 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ITrafficService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MarketLocator.Models\MarketLocator.Models.csproj">
+      <Project>{5DDCAA55-05F8-4326-8453-16D6DC39C584}</Project>
+      <Name>MarketLocator.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

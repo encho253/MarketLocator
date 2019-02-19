@@ -12,6 +12,26 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
+    <link href="Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.standalone.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.structure.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-multiselect.css" rel="stylesheet" />    
+    <script type="text/javascript" src="Scripts/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="Scripts/leaflet-0.7.3.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap-datepicker.js"></script>
+    <script src="Scripts/bootstrap-multiselect.js"></script>
+
+    <script>
+        $(function () {
+            $(".datepicker-field").datepicker();
+        });
+    </script>
+
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 

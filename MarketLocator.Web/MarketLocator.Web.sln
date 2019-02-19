@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.DB", "MarketL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.Interfaces", "MarketLocator.Interfaces\MarketLocator.Interfaces.csproj", "{81906A5A-20AF-4C46-B237-F20ADA4A1F40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketLocator.Models", "MarketLocator.Models\MarketLocator.Models.csproj", "{5DDCAA55-05F8-4326-8453-16D6DC39C584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81906A5A-20AF-4C46-B237-F20ADA4A1F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DDCAA55-05F8-4326-8453-16D6DC39C584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDCAA55-05F8-4326-8453-16D6DC39C584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDCAA55-05F8-4326-8453-16D6DC39C584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDCAA55-05F8-4326-8453-16D6DC39C584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

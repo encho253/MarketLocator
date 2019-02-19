@@ -7,11 +7,13 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 var markerArray = [];
 
-//[48.1486, 17.1077]
-function addPoint(a, b) {
-    console.log(a + " " + b);
+function addPoint() {
+    var field = document.getElementById('data');
+    var trafficData = JSON.parse(field.value);
 
-    markerArray.push(L.marker([a, b]));
+    trafficData.forEach(function (element) {
+        markerArray.push(L.marker([element.CellLat, element.CellLong]).bindPopup(element.ANumber + " LatLng(" + element.CellLat + ", " + element.CellLong + ")").openPopup());
+    });
 
     var group = L.featureGroup(markerArray).addTo(map);
     map.fitBounds(group.getBounds());
